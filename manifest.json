@@ -1,0 +1,9 @@
+{
+    "name": "WhistleJester",
+    "version_number": "1.0.0",
+    "author": "Amlinde",
+    "description": "Changes the Jester's wind up sound to an edited version of Whistle from the Josh Hutcherson Whistle Edit",
+    "dependencies": [
+      "BepInEx-BepInExPack-5.4.2100"
+    ]
+  }
