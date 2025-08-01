@@ -25,7 +25,12 @@ namespace WhistleJester
             {
                 Audio = DownloadHandlerAudioClip.GetContent(audioLoader);
 
-                new Harmony(PluginInfo.PLUGIN_GUID).PatchAll(typeof(JesterPatch));
+                var harmony = new Harmony(PluginInfo.PLUGIN_GUID);
+                harmony.PatchAll(typeof(JesterAudioPatch));
+                if (ConstTimer)
+                {
+                    harmony.PatchAll(typeof(JesterAIPatch));
+                }
                 Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
             }
             else
@@ -36,7 +41,7 @@ namespace WhistleJester
     }
 
     [HarmonyPatch(typeof(JesterAI))]
-    internal class JesterPatch
+    internal class JesterAudioPatch
     {
         [HarmonyPatch("Start")]
         [HarmonyPostfix]
@@ -44,15 +49,16 @@ namespace WhistleJester
         {
             __instance.popGoesTheWeaselTheme = Plugin.Audio;
         }
+    }
 
+    [HarmonyPatch(typeof(JesterAI))]
+    internal class JesterAIPatch
+    {
         [HarmonyPatch("SetJesterInitialValues")]
         [HarmonyPostfix]
         public static void ForceTime(JesterAI __instance)
         {
-            if (Plugin.ConstTimer)
-            {
-                __instance.popUpTimer = 41.5f;
-            }
+            __instance.popUpTimer = 41.5f;
         }
     }
 }

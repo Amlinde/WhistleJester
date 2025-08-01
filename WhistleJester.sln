@@ -2,7 +2,7 @@
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhistleJester", "WhistleJester.csproj", "{2D0CB4BA-0EBB-4370-8CD3-78E64629512E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhistleJester", "WhistleJester/WhistleJester.csproj", "{2D0CB4BA-0EBB-4370-8CD3-78E64629512E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

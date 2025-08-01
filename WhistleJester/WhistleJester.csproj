@@ -22,29 +22,11 @@
 
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\lib\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\lib\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Netcode.Runtime">
-      <HintPath>..\lib\Unity.Netcode.Runtime.dll</HintPath>
+      <HintPath>..\..\lib\Unity.Netcode.Runtime.dll</HintPath>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="README.md">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="CHANGELOG.md">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="manifest.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="icon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="WhatHaveIDone.mp3">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   
 </Project>
